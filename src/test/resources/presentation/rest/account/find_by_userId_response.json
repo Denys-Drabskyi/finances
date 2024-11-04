@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "accountName": "test1",
+    "balance": 0,
+    "currency": "USD"
+  },
+  {
+    "id": 2,
+    "accountName": "test2",
+    "balance": 0,
+    "currency": "USD"
+  }
+]
