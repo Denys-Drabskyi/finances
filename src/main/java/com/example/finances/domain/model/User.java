@@ -1,7 +1,6 @@
 package com.example.finances.domain.model;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,5 +16,4 @@ public class User {
     private String username;
     private String email;
     private LocalDateTime createdAt;
-    private List<Account> accounts;
 }

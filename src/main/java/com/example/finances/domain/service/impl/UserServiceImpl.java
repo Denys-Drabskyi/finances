@@ -1,23 +1,21 @@
-package com.example.finances.persistence.jpa.repository;
+package com.example.finances.domain.service.impl;
 
 import com.example.finances.domain.model.User;
-import com.example.finances.persistence.jpa.dao.JpaUserDao;
-import com.example.finances.persistence.jpa.mapper.JpaUserEntityMapper;
+import com.example.finances.domain.service.UserService;
 import com.example.finances.persistence.repository.UserRepository;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
-@Repository
+@Service
 @RequiredArgsConstructor
-public class JpaUserRepository implements UserRepository {
-    private final JpaUserDao userDao;
-    private final JpaUserEntityMapper userMapper;
+public class UserServiceImpl implements UserService {
+    private final UserRepository userRepository;
 
     @Override
     public boolean existById(Long id) {
-        return userDao.existsById(id);
+        return userRepository.existById(id);
     }
 
     @Override
@@ -26,7 +24,12 @@ public class JpaUserRepository implements UserRepository {
     }
 
     @Override
-    public User save(User model) {
+    public User create(User entity) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public User update(User entity) {
         throw new UnsupportedOperationException();
     }
 

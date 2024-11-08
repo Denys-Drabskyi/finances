@@ -2,8 +2,6 @@ package com.example.finances.presentation.rest.dto;
 
 import com.example.finances.persistence.enums.Currency;
 
-import java.math.BigDecimal;
-
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,10 +12,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AccountDto {
-    @NotNull(message = "id must not be null")
-    private Long id;
+public class CreateAccountDto {
+    @NotNull(message = "accountName must not be null")
     private String accountName;
-    private BigDecimal balance;
+    @NotNull(message = "userId must not be null")
+    private Long userId;
+    @NotNull(message = "currency must not be null")
     private Currency currency;
 }

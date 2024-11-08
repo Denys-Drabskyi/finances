@@ -4,6 +4,6 @@ import com.example.finances.domain.model.Account;
 
 import java.util.List;
 
-public interface AccountService {
+public interface AccountService extends CrudService<Account> {
     List<Account> findByUserId(Long userId);
 }

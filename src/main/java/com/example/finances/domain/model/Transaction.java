@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Transaction {
     private Long id;
-    private Account account;
+    private Long accountId;
     private BigDecimal amount;
     private TransactionType transactionType;
     private LocalDateTime transactionDate;
